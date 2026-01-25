@@ -2,21 +2,17 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
-  const { theme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-    useEffect(() => {
+  useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 0);
     };
@@ -25,101 +21,74 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (!mounted) return null; 
+  if (!mounted) return null;
 
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
-  const logoSrc =
-    currentTheme === "dark" ? "/white_logo.png" : "/black_logo.png";
-
- return (
-  <>
-    
-    <div
-      className={`
-        h-32 sticky top-0 left-0 z-50 w-full flex items-center justify-center transition-all duration-300
-        ${
-          scrolled
-            ? currentTheme === "dark"
-              ? "bg-[#242632]/90 backdrop-blur-md shadow-lg"
-              : "bg-white/90 backdrop-blur-md shadow-md"
-            : "bg-transparent"
-        }
-      `}
-    >
-      <div className="flex w-5/6 justify-between items-center gap-5">
-        
-        
-        <Image
-          src={logoSrc}
-          alt="Logo"
-          width={170}
-          height={80}
-          priority
-        />
-
-    
-        <div className="bg-[#E6E6E6] dark:bg-[#353749] hidden md:flex w-2/3 rounded-2xl h-16"></div>
-
+  return (
+    <>
       
-        <div className="flex items-center gap-4">
+      <div
+        className={`
+          h-32 sticky top-0 left-0 z-50 w-full flex items-center justify-center transition-all duration-300
+          ${
+            scrolled
+              ? "bg-[#242632]/90 backdrop-blur-md shadow-lg"
+              : "bg-transparent"
+          }
+        `}
+      >
+        <div className="flex w-5/6 justify-between items-center gap-5">
+       
+          <Image
+            src="/white_logo.png"
+            alt="Logo"
+            width={170}
+            height={80}
+            priority
+          />
+
+        
+          <div className="bg-[#353749] hidden md:flex w-2/3 rounded-2xl h-16" />
 
          
           <button
-            onClick={() => setMenuOpen(true)}
-            className="md:hidden w-16 h-16 rounded-xl  bg-blue-400 flex items-center justify-center"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="md:hidden w-16 h-16 rounded-xl bg-[#353749] flex items-center justify-center"
           >
-            <Image 
-           src={"/menu.png"}
-                alt="Logo"
-                width={30}
-                height={30}
-                priority
-            />
+            <Image src="/menu.png" alt="Menu" width={30} height={30} priority />
           </button>
-          <ThemeToggle />
         </div>
       </div>
-    </div>
 
- 
-    <div
-      className={`
-        fixed top-0 right-0 z-50 h-screen w-72 bg-white dark:bg-[#1E2128]
-        transform transition-transform duration-300
-        ${menuOpen ? "translate-x-0" : "translate-x-full"}
-      `}
-    >
- 
-      <div className="flex justify-end p-6">
-        <button
-          onClick={() => setMenuOpen(false)}
-          className="w-10 h-10 rounded-full bg-[#6AA6FF] text-white"
-        >
-          ✕
-        </button>
-      </div>
-
- 
-      <div className="flex flex-col gap-6 px-6 text-lg font-medium">
-        <span className="cursor-pointer">Home</span>
-        <span className="cursor-pointer">Services</span>
-        <span className="cursor-pointer">Contact</span>
-        <span className="cursor-pointer">Blog</span>
-        <span className="cursor-pointer">News</span>
-      </div>
-    </div>
-
-   
-    {menuOpen && (
+      
       <div
-        onClick={() => setMenuOpen(false)}
-        className="fixed inset-0 bg-black/40 z-40 md:hidden"
-      />
-    )}
-  </>
-);
+        className={`
+          fixed top-32 left-0 z-40 w-full bg-[#1E2128]
+          overflow-hidden transition-all duration-300 md:hidden
+          ${menuOpen ? "max-h-96" : "max-h-0"}
+        `}
+      >
+        <div className="flex flex-col gap-6 px-6 py-8 text-lg font-medium text-white">
+          {["Home", "Services", "Contact", "Blog", "News"].map((item) => (
+            <span
+              key={item}
+              onClick={() => setMenuOpen(false)}
+              className="cursor-pointer hover:text-blue-400 transition"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
 
+      
+      {menuOpen && (
+        <div
+          onClick={() => setMenuOpen(false)}
+          className="fixed inset-0 bg-black/40 z-30 md:hidden"
+        />
+      )}
+    </>
+  );
 };
 
 export default Navbar;

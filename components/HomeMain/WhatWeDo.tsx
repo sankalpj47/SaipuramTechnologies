@@ -23,7 +23,7 @@ const WhatWeDo = () => {
   }, []);
 
   return (
-    <section className="flex mt-24 justify-center">
+    <section className="flex md:mt-24 mt-24 justify-center">
   <div
     ref={ref}
     className={`

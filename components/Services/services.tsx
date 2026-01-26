@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -36,7 +36,6 @@ const services = [
   },
 ];
 
-
 const Services = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -58,44 +57,47 @@ const Services = () => {
 
   return (
     <section className="py-16 bg-background text-foreground">
-      <div
-        ref={ref}
-        className={`
-          max-w-6xl mx-auto px-6
-          transition-all duration-700 ease-out
-          ${visible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
-        `}
-      >
-        {/* Heading */}
-        <h2 className="text-center text-2xl text-white  md:text-4xl font-bold mb-14">
-          Smarter{" "}
-          <span className="bg-accent text-blue-400 px-2 rounded-md">
-            Science.
-          </span>{" "}
-          Faster Cures.
-        </h2>
+      <div ref={ref} className="max-w-6xl mx-auto px-6">
+        <div
+          className={`transition-all duration-700 ease-out ${
+            visible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+          }`}
+        >
+          {/* Heading */}
+          <h2 className="text-center text-2xl text-white md:text-4xl font-bold mb-14">
+            Smarter{" "}
+            <span className="bg-accent text-blue-400 px-2 rounded-md">
+              Science.
+            </span>{" "}
+            Faster Cures.
+          </h2>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, i) => (
-            <div
-              key={i}
-             className={`
-              rounded-2xl p-8 bg-[#292b38] text-cardForeground
-                  transition hover:scale-[1.02]
-                  `}
-                 >
-              <div className="w-12 h-12 mb-5 flex items-center justify-center rounded-full bg-white" />
+          {/* Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service, i) => (
+              <div
+                key={i}
+                className="rounded-2xl p-8 bg-[#292b38] text-cardForeground transition hover:scale-[1.02]"
+              >
+                <div className="w-12 h-12 mb-5 flex items-center justify-center rounded-full bg-white">
+                  {/* <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={24}
+                    height={24}
+                  /> */}
+                </div>
 
-              <h3 className="text-xl text-white font-semibold mb-3">
-                {service.title}
-              </h3>
+                <h3 className="text-xl text-white font-semibold mb-3">
+                  {service.title}
+                </h3>
 
-              <p className="text-sm text-white opacity-80 leading-relaxed">
-                {service.desc}
-              </p>
-            </div>
-          ))}
+                <p className="text-sm text-white opacity-80 leading-relaxed">
+                  {service.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

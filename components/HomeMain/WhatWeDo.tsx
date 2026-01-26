@@ -31,7 +31,7 @@ const WhatWeDo = () => {
       ${visible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
     `}
   >
-    <h2 className="text-5xl md:text-6xl font-bold text-white">
+    <h2 className="text-4xl  md:text-6xl font-bold text-white">
       What do we do?
     </h2>
   </div>

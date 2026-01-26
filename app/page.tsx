@@ -8,7 +8,7 @@ export default function Home() {
    {/* hero */}
     <section
   id="home"
-  className="w-full lg:h-[560px] md:h-[400px] h-72 flex justify-center"
+  className="w-full lg:h-[560px] md:h-[400px] h-96 flex justify-center"
 >
   <Hero />
 </section>

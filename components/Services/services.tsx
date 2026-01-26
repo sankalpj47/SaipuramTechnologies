@@ -67,7 +67,7 @@ const Services = () => {
         `}
       >
         {/* Heading */}
-        <h2 className="text-center text-2xl  md:text-4xl font-bold mb-14">
+        <h2 className="text-center text-2xl text-white  md:text-4xl font-bold mb-14">
           Smarter{" "}
           <span className="bg-accent text-blue-400 px-2 rounded-md">
             Science.
@@ -81,18 +81,17 @@ const Services = () => {
             <div
               key={i}
              className={`
-  rounded-2xl p-8 bg-[#292b38] text-cardForeground
-  transition hover:scale-[1.02]
-`}
-
-            >
+              rounded-2xl p-8 bg-[#292b38] text-cardForeground
+                  transition hover:scale-[1.02]
+                  `}
+                 >
               <div className="w-12 h-12 mb-5 flex items-center justify-center rounded-full bg-white" />
 
-              <h3 className="text-xl font-semibold mb-3">
+              <h3 className="text-xl text-white font-semibold mb-3">
                 {service.title}
               </h3>
 
-              <p className="text-sm opacity-80 leading-relaxed">
+              <p className="text-sm text-white opacity-80 leading-relaxed">
                 {service.desc}
               </p>
             </div>

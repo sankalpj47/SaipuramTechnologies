@@ -106,7 +106,7 @@ const Navbar = () => {
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className="hover:text-blue-400 transition"
+             className="text-white hover:text-blue-400 transition"
             >
               {item.label}
             </Link>

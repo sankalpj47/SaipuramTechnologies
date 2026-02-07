@@ -9,23 +9,22 @@ export default function Home() {
   return (
     <>
       {/* HERO SECTION */}
-      <section
-        id="home"
-        className="w-full lg:h-[560px] md:h-[400px] h-96 flex justify-center"
-      >
+      <section id="home" className="w-full">
         <Hero />
       </section>
 
       {/* ABOUT SECTION */}
-     
+      <section id="about" className="w-full">
         <AboutPage />
-     
-         <OurFocus/>
+      </section>
 
-         <Value/>
-    
+      <section className="w-full">
+        <OurFocus />
+      </section>
 
-   
+      <section className="w-full">
+        <Value />
+      </section>
     </>
   );
 }

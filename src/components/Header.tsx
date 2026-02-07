@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,9 +29,9 @@ export const Header = () => {
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
             </a>
-            <a href="#solutions" className="text-muted-foreground hover:text-foreground transition-colors">
-              Solutions
-            </a>
+            <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors">
+              Products & Services
+            </Link>
             <a href="#value" className="text-muted-foreground hover:text-foreground transition-colors">
               Value
             </a>
@@ -56,9 +57,9 @@ export const Header = () => {
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
             </a>
-            <a href="#solutions" className="text-muted-foreground hover:text-foreground transition-colors">
-              Solutions
-            </a>
+            <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors">
+              Products & Services
+            </Link>
             <a href="#value" className="text-muted-foreground hover:text-foreground transition-colors">
               Value
             </a>

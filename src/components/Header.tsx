@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -16,26 +16,26 @@ export const Header = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
+          <Link to="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-display font-bold text-lg">S</span>
             </div>
-            <span className="font-display font-semibold text-xl text-foreground">
+            <span className="font-display text-xl text-foreground">
               Saipuram
             </span>
-          </div>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               About
             </a>
-            <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               Products & Services
             </Link>
-            <a href="#value" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#value" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               Value
             </a>
-            <Button className="gradient-bg text-primary-foreground hover:opacity-90">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6">
               Contact Us
             </Button>
           </nav>
@@ -44,7 +44,7 @@ export const Header = () => {
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <Menu className="w-6 h-6 text-foreground" />
+            {mobileMenuOpen ? <X className="w-6 h-6 text-foreground" /> : <Menu className="w-6 h-6 text-foreground" />}
           </button>
         </div>
 
@@ -63,7 +63,7 @@ export const Header = () => {
             <a href="#value" className="text-muted-foreground hover:text-foreground transition-colors">
               Value
             </a>
-            <Button className="gradient-bg text-primary-foreground hover:opacity-90 w-full">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full w-full">
               Contact Us
             </Button>
           </motion.nav>

@@ -30,36 +30,33 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section className="py-24 bg-card">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <AnimatedSection className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-foreground">Our </span>
-            <span className="gradient-text">Services</span>
+        <AnimatedSection className="mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-border text-sm text-muted-foreground mb-4">
+            Services
+          </span>
+          <h2 className="font-display text-3xl md:text-5xl text-foreground leading-tight max-w-2xl">
+            End-to-end AI services powering{" "}
+            <span className="text-accent">every stage</span> of drug discovery
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            End-to-end AI services powering every stage of drug discovery
-          </p>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, i) => (
             <AnimatedSection key={service.name} delay={i * 0.1}>
-              <div className="group relative h-full">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
-                <div className="bg-background rounded-2xl p-8 border border-border hover:border-accent/30 transition-all duration-300 h-full shadow-sm hover:shadow-xl">
-                  <div className="flex items-start gap-5">
-                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-                      <service.icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                        {service.name}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
+              <div className="group bg-card rounded-3xl p-8 h-full hover:bg-primary transition-all duration-500 cursor-pointer">
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 rounded-2xl bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center shrink-0 transition-colors duration-500">
+                    <service.icon className="w-6 h-6 text-accent transition-colors duration-500" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl text-foreground group-hover:text-primary-foreground mb-2 transition-colors duration-500">
+                      {service.name}
+                    </h3>
+                    <p className="text-muted-foreground group-hover:text-primary-foreground/70 leading-relaxed transition-colors duration-500">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               </div>

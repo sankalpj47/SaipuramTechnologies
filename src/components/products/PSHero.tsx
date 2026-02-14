@@ -1,54 +1,69 @@
 import { motion } from "framer-motion";
-import { Cpu, ArrowDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 export const PSHero = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-primary/8 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-accent/8 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
-      </div>
+    <section className="relative overflow-hidden pt-24 pb-0">
+      <div className="bg-primary rounded-b-[3rem] md:rounded-b-[4rem] pb-16 md:pb-24">
+        <div className="container mx-auto px-6 pt-16 md:pt-24">
+          <div className="max-w-4xl">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/70 mb-8"
+            >
+              Products & Services
+            </motion.span>
 
-      <div className="container mx-auto px-6 relative z-10 text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.1] mb-8"
+            >
+              Intelligent Discovery.{" "}
+              <span className="text-accent">Evidence-Driven</span>{" "}
+              Innovation.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-lg md:text-xl text-primary-foreground/60 max-w-3xl mb-12"
+            >
+              A platform that helps scientists with intelligent discovery and evidence-driven innovation, revolutionizing global healthcare.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+            >
+              <a href="#platform" className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-primary-foreground/20 hover:bg-primary-foreground/10 transition-colors animate-float">
+                <ArrowDown className="w-5 h-5 text-primary-foreground/60" />
+              </a>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Decorative elements */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8"
+          transition={{ duration: 1, delay: 0.4 }}
+          className="absolute top-40 right-16 hidden lg:block"
         >
-          <Cpu className="w-4 h-4 text-accent" />
-          <span className="text-sm font-medium text-accent">Products & Services</span>
+          <div className="w-28 h-28 rounded-full bg-accent/30 animate-float" />
         </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-        >
-          <span className="text-foreground">Intelligent Discovery.</span>
-          <br />
-          <span className="gradient-text">Evidence-Driven Innovation.</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto"
-        >
-          A platform that helps scientists with intelligent discovery and evidence-driven innovation, revolutionizing global healthcare.
-        </motion.p>
-
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-          className="flex justify-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="absolute top-56 right-56 hidden lg:block"
         >
-          <a href="#platform" className="animate-float">
-            <ArrowDown className="w-6 h-6 text-muted-foreground" />
-          </a>
+          <div className="w-16 h-16 rounded-full border-4 border-accent/40 animate-float" style={{ animationDelay: "2s" }} />
         </motion.div>
       </div>
     </section>

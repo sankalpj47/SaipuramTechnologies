@@ -27,37 +27,43 @@ const tiers = [
 
 export const BusinessModel = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-card">
       <div className="container mx-auto px-6">
-        <AnimatedSection className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-foreground">Business </span>
-            <span className="gradient-text">Model</span>
+        <AnimatedSection className="mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-border text-sm text-muted-foreground mb-4">
+            Business Model
+          </span>
+          <h2 className="font-display text-3xl md:text-5xl text-foreground leading-tight max-w-2xl">
+            B2B SaaS with{" "}
+            <span className="text-accent">tiered subscription</span> plans
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            B2B SaaS with tiered subscription plans
-          </p>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-3 gap-6">
           {tiers.map((tier, i) => (
             <AnimatedSection key={tier.name} delay={i * 0.15}>
               <div
-                className={`rounded-2xl p-8 border h-full flex flex-col transition-all duration-300 shadow-sm hover:shadow-xl ${
+                className={`rounded-3xl p-8 h-full flex flex-col transition-all duration-500 cursor-pointer ${
                   tier.highlight
-                    ? "bg-gradient-to-br from-primary/5 to-accent/5 border-primary/30"
-                    : "bg-card border-border hover:border-primary/20"
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-background hover:bg-primary hover:text-primary-foreground group"
                 }`}
               >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${
-                  tier.highlight ? "gradient-bg" : "bg-primary/10"
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-500 ${
+                  tier.highlight ? "bg-accent" : "bg-primary/10 group-hover:bg-primary-foreground/10"
                 }`}>
-                  <tier.icon className={`w-6 h-6 ${tier.highlight ? "text-primary-foreground" : "text-primary"}`} />
+                  <tier.icon className={`w-6 h-6 transition-colors duration-500 ${
+                    tier.highlight ? "text-accent-foreground" : "text-primary group-hover:text-primary-foreground"
+                  }`} />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                <h3 className={`font-display text-xl mb-3 transition-colors duration-500 ${
+                  tier.highlight ? "text-primary-foreground" : "text-foreground group-hover:text-primary-foreground"
+                }`}>
                   {tier.name}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed flex-grow">
+                <p className={`leading-relaxed flex-grow transition-colors duration-500 ${
+                  tier.highlight ? "text-primary-foreground/70" : "text-muted-foreground group-hover:text-primary-foreground/70"
+                }`}>
                   {tier.description}
                 </p>
               </div>

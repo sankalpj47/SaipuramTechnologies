@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden pt-24 pb-0">
+    <section className="relative overflow-hidden pt-0 pb-0">
       {/* Main hero with dark green background */}
       <div className="bg-primary rounded-b-[3rem] md:rounded-b-[4rem] pb-16 md:pb-24">
         <div className="container mx-auto px-6 pt-16 md:pt-24">

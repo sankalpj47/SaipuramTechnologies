@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroScientist from "@/assets/hero-scientist.svg";
+
 
 export const Hero = () => {
   return (

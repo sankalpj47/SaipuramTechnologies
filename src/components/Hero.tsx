@@ -9,8 +9,8 @@ export const Hero = () => {
       {/* Main hero with dark green background */}
       <div className="bg-primary rounded-b-[3rem] md:rounded-b-[4rem] pb-16 md:pb-24">
         <div className="container mx-auto px-6 pt-16 md:pt-24">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="max-w-2xl flex-1">
+          <div className="flex flex-col items-center text-center">
+            <div className="max-w-3xl">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="flex flex-wrap items-center gap-4 mb-12"
+                className="flex flex-wrap items-center justify-center gap-4 mb-12"
               >
                 <Button className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-8 py-6 text-base font-medium">
                   Explore Solutions
@@ -48,7 +48,7 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="flex flex-wrap gap-3"
+                className="flex flex-wrap justify-center gap-3"
               >
                 {["Drug Discovery", "AI Analytics", "Pharma Intelligence"].map((tag) => (
                   <span
@@ -60,20 +60,6 @@ export const Hero = () => {
                 ))}
               </motion.div>
             </div>
-
-            {/* Hero Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex-1 flex justify-center"
-            >
-              <img
-                src={heroScientist}
-                alt="Scientist working with AI-powered pharma tools"
-                className="w-full max-w-md lg:max-w-lg xl:max-w-xl drop-shadow-2xl"
-              />
-            </motion.div>
           </div>
         </div>
       </div>

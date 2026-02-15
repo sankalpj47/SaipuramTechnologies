@@ -15,23 +15,23 @@ export const Header = () => {
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-50 glass"
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src={headerLogo} alt="Saipuram Technologies" className="h-10 w-auto" />
+            <img src={headerLogo} alt="Saipuram Technologies" className="h-14 w-auto" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium">
               About
             </a>
-            <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+            <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium">
               Products & Services
             </Link>
-            <a href="#value" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+            <a href="#value" className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium">
               Value
             </a>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-3 text-base">
               Contact Us
             </Button>
           </nav>

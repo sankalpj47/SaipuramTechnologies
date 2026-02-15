@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import headerLogo from "@/assets/header-logo.png";
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,13 +17,8 @@ export const Header = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-lg">S</span>
-            </div>
-            <span className="font-display text-xl text-foreground">
-              Saipuram
-            </span>
+          <Link to="/" className="flex items-center gap-2">
+            <img src={headerLogo} alt="Saipuram Technologies" className="h-10 w-auto" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

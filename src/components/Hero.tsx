@@ -7,8 +7,8 @@ export const Hero = () => {
   return (
     <section className="relative overflow-hidden pt-4 pb-0">
       {/* Main hero with dark green background */}
-      <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 pb-16 md:pb-24">
-        <div className="container mx-auto px-6 pt-16 md:pt-24">
+      <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 pb-24 md:pb-36">
+        <div className="container mx-auto px-6 pt-20 md:pt-32">
           <div className="flex flex-col items-center text-center">
             <div className="max-w-5xl">
               <motion.h1

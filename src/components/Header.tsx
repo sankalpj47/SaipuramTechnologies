@@ -22,16 +22,30 @@ export const Header = () => {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium">
+            <a
+              href="#about"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105"
+            >
               About
             </a>
-            <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium">
+            <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
               Products & Services
             </Link>
-            <a href="#value" className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium">
+            <a
+              href="#value"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('value')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105"
+            >
               Value
             </a>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-3 text-base">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/80 hover:scale-105 transition-all duration-200 rounded-full px-8 py-3 text-base">
               Contact Us
             </Button>
           </nav>

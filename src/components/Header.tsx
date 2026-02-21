@@ -23,11 +23,7 @@ export const Header = () => {
 
           <nav className="hidden md:flex items-center gap-8">
             <a
-              href="#about"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              href="/#about"
               className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105"
             >
               About
@@ -36,11 +32,7 @@ export const Header = () => {
               Products & Services
             </Link>
             <a
-              href="#value"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('value')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              href="/#value"
               className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105"
             >
               Value

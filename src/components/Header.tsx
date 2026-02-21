@@ -31,12 +31,12 @@ export const Header = () => {
             <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
               Products & Services
             </Link>
-            <a
-              href="/#value"
-              className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105"
-            >
-              Value
-            </a>
+            <Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
+              Case Studies
+            </Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
+              Blog
+            </Link>
             <Button className="bg-primary text-primary-foreground hover:bg-primary/80 hover:scale-105 transition-all duration-200 rounded-full px-8 py-3 text-base">
               Contact Us
             </Button>
@@ -62,9 +62,12 @@ export const Header = () => {
             <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors">
               Products & Services
             </Link>
-            <a href="#value" className="text-muted-foreground hover:text-foreground transition-colors">
-              Value
-            </a>
+            <Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors">
+              Case Studies
+            </Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
+              Blog
+            </Link>
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full w-full">
               Contact Us
             </Button>

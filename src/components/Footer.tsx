@@ -32,9 +32,10 @@ export const Footer = () => {
             {/* Links */}
             <div className="flex flex-col gap-3">
               <span className="text-primary-foreground/40 text-xs uppercase tracking-wider mb-2">Navigation</span>
-              <a href="#about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">About</a>
+              <a href="/#about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">About</a>
               <Link to="/products-services" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Products & Services</Link>
-              <a href="#value" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Value</a>
+              <Link to="/case-studies" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Case Studies</Link>
+              <Link to="/blog" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Blog</Link>
               <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Contact</a>
             </div>
 

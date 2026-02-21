@@ -3,68 +3,68 @@ import { ArrowDown } from "lucide-react";
 
 export const PSHero = () => {
   return (
-    <section className="relative overflow-hidden pt-24 pb-0">
-      <div className="bg-primary rounded-b-[3rem] md:rounded-b-[4rem] pb-16 md:pb-24">
-        <div className="container mx-auto px-6 pt-16 md:pt-24">
-          <div className="max-w-4xl">
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/70 mb-8"
-            >
-              Products & Services
-            </motion.span>
+    <section className="relative overflow-hidden pt-4 pb-0">
+      <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 pb-24 md:pb-36">
+        <div className="container mx-auto px-6 pt-20 md:pt-32">
+          <div className="flex flex-col items-center text-center">
+            <div className="max-w-5xl">
+              <motion.span
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/70 mb-8"
+              >
+                Products & Services
+              </motion.span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.1] mb-8"
-            >
-              Intelligent Discovery.{" "}
-              <span className="text-accent">Evidence-Driven</span>{" "}
-              Innovation.
-            </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-[1.15] mb-8"
+              >
+                Intelligent Discovery.{" "}
+                <span className="text-accent">Evidence-Driven</span>{" "}
+                Innovation.
+              </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-lg md:text-xl text-primary-foreground/60 max-w-3xl mb-12"
-            >
-              A platform that helps scientists with intelligent discovery and evidence-driven innovation, revolutionizing global healthcare.
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="text-lg md:text-xl text-primary-foreground/60 max-w-3xl mx-auto mb-12"
+              >
+                A platform that helps scientists with intelligent discovery and evidence-driven innovation, revolutionizing global healthcare.
+              </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
-            >
-              <a href="#platform" className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-primary-foreground/20 hover:bg-primary-foreground/10 transition-colors animate-float">
-                <ArrowDown className="w-5 h-5 text-primary-foreground/60" />
-              </a>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="flex flex-wrap justify-center gap-3 mb-12"
+              >
+                {["Drug Discovery", "AI Analytics", "Pharma Intelligence"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-4 py-2 rounded-full border border-primary-foreground/20 text-primary-foreground/80 text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+              >
+                <a href="#platform" className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-primary-foreground/20 hover:bg-primary-foreground/10 transition-colors animate-float">
+                  <ArrowDown className="w-5 h-5 text-primary-foreground/60" />
+                </a>
+              </motion.div>
+            </div>
           </div>
         </div>
-
-        {/* Decorative elements */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="absolute top-40 right-16 hidden lg:block"
-        >
-          <div className="w-28 h-28 rounded-full bg-accent/30 animate-float" />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="absolute top-56 right-56 hidden lg:block"
-        >
-          <div className="w-16 h-16 rounded-full border-4 border-accent/40 animate-float" style={{ animationDelay: "2s" }} />
-        </motion.div>
       </div>
     </section>
   );

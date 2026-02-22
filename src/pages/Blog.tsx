@@ -72,9 +72,9 @@ const Blog = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.7, delay: 0.5 }}
                 >
-                  <a href="#articles" className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-primary-foreground/20 hover:bg-primary-foreground/10 transition-colors animate-float hover-scale">
+                  <button onClick={() => document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-primary-foreground/20 hover:bg-primary-foreground/10 transition-colors animate-float hover-scale">
                     <ArrowDown className="w-5 h-5 text-primary-foreground/60" />
-                  </a>
+                  </button>
                 </motion.div>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts */}
-      <section className="py-24 bg-background">
+      <section id="articles" className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <AnimatedSection className="mb-16">
             <div className="max-w-2xl">

@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
-import { Brain, Microscope, Shield, Activity, ChevronDown } from "lucide-react";
+import { Brain, Microscope, Shield, Activity, ArrowDown } from "lucide-react";
 
 const therapeuticAreas = [
   {
@@ -37,46 +37,49 @@ const CaseStudies = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-8 md:pt-10 px-4 md:px-6">
-        <div className="relative bg-primary rounded-[2rem] md:rounded-[3rem] overflow-hidden">
-          <div className="min-h-[calc(100vh-2rem)] flex items-center">
-            <div className="container mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/70 mb-8"
-              >
-                Case Studies
-              </motion.span>
+      <section className="relative overflow-hidden pt-4 pb-0">
+        <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 min-h-[calc(100vh-2rem)] flex items-center justify-center">
+          <div className="container mx-auto px-6 py-20">
+            <div className="flex flex-col items-center text-center">
+              <div className="max-w-5xl">
+                <motion.span
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/70 mb-8"
+                >
+                  Case Studies
+                </motion.span>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-tight max-w-5xl mb-8"
-              >
-                Transforming Drug Discovery with{" "}
-                <span className="text-accent">Conversational AI</span>
-              </motion.h1>
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.1 }}
+                  className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-tight max-w-5xl mb-8"
+                >
+                  Transforming Drug Discovery with{" "}
+                  <span className="text-accent">Conversational AI</span>
+                </motion.h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.35 }}
-                className="text-primary-foreground/70 text-lg md:text-xl max-w-3xl leading-relaxed mb-12"
-              >
-                We're replacing the months of manual data mining in drug discovery with an LLM-powered portal that lets scientists 'talk' to biological data. Based on a breakthrough real-time network analysis framework, we help biotech companies identify the right drug targets and biomarkers in minutes, not months.
-              </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.2 }}
+                  className="text-primary-foreground/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12"
+                >
+                  We're replacing the months of manual data mining in drug discovery with an LLM-powered portal that lets scientists 'talk' to biological data. Based on a breakthrough real-time network analysis framework, we help biotech companies identify the right drug targets and biomarkers in minutes, not months.
+                </motion.p>
 
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.7, delay: 0.6 }}
-                className="animate-bounce"
-              >
-                <ChevronDown className="w-8 h-8 text-primary-foreground/40" />
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.7, delay: 0.5 }}
+                >
+                  <a href="#therapeutic-areas" className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-primary-foreground/20 hover:bg-primary-foreground/10 transition-colors animate-float hover-scale">
+                    <ArrowDown className="w-5 h-5 text-primary-foreground/60" />
+                  </a>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>

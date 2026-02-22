@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react";
 export const PSHero = () => {
   return (
     <section className="relative overflow-hidden pt-4 pb-0">
-      <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 min-h-[calc(100vh-2rem)] flex items-center">
+      <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 min-h-[calc(100vh-2rem)] flex items-center justify-center">
         <div className="container mx-auto px-6 py-20">
           <div className="flex flex-col items-center text-center">
             <div className="max-w-5xl">

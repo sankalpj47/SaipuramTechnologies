@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowDown } from "lucide-react";
 
 export const Hero = () => {
   return (
     <section className="relative overflow-hidden pt-4 pb-0">
-      <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 min-h-[calc(100vh-2rem)] flex items-center">
+      <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 min-h-[calc(100vh-2rem)] flex items-center justify-center">
         <div className="container mx-auto px-6 py-20">
           <div className="flex flex-col items-center text-center">
             <div className="max-w-5xl">
@@ -54,7 +54,7 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="flex flex-wrap justify-center gap-3"
+                className="flex flex-wrap justify-center gap-3 mb-12"
               >
                 {["Drug Discovery", "AI Analytics", "Pharma Intelligence"].map((tag, i) => (
                   <motion.span
@@ -67,6 +67,16 @@ export const Hero = () => {
                     {tag}
                   </motion.span>
                 ))}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+              >
+                <a href="#about" className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-primary-foreground/20 hover:bg-primary-foreground/10 transition-colors animate-float hover-scale">
+                  <ArrowDown className="w-5 h-5 text-primary-foreground/60" />
+                </a>
               </motion.div>
             </div>
           </div>

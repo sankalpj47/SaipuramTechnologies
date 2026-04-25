@@ -1,6 +1,47 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+const columns = [
+  {
+    title: "Platform",
+    links: [
+      { label: "AI Research Agents", href: "#" },
+      { label: "Discovery Engine", href: "#" },
+      { label: "Conversational Intelligence", href: "#" },
+      { label: "Enterprise Security", href: "#" },
+    ],
+  },
+  {
+    title: "Products",
+    links: [
+      { label: "TBEP", href: "/products-services" },
+      { label: "TRACES", href: "/products-services" },
+      { label: "TAU-KG", href: "/products-services" },
+      { label: "MolGen AI", href: "/products-services" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/#about" },
+      { label: "Contact", href: "#" },
+      { label: "Careers", href: "#" },
+      { label: "Blog", href: "/blog" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "Documentation", href: "#" },
+      { label: "API Reference", href: "#" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Research Papers", href: "#" },
+    ],
+  },
+];
+
+const isInternal = (href: string) => href.startsWith("/");
+
 export const Footer = () => {
   return (
     <footer className="bg-primary rounded-t-[3rem] pt-16 pb-8">
@@ -11,9 +52,9 @@ export const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="grid md:grid-cols-3 gap-12 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-14">
             {/* Brand */}
-            <div>
+            <div className="col-span-2 md:col-span-3 lg:col-span-1">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
                   <span className="text-accent-foreground font-display font-bold text-lg">S</span>
@@ -23,33 +64,44 @@ export const Footer = () => {
                 </span>
               </div>
               <p className="text-primary-foreground/50 text-sm leading-relaxed">
-                AI-Powered Pharma Intelligence.
+                Unified AI Science Platform.
                 <br />
-                Empowering innovation from molecule to market.
+                Combining Research, Discovery, and Intelligence in one place.
               </p>
             </div>
 
-            {/* Links */}
-            <div className="flex flex-col gap-3">
-              <span className="text-primary-foreground/40 text-xs uppercase tracking-wider mb-2">Navigation</span>
-              <a href="/#about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">About</a>
-              <Link to="/products-services" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Products & Services</Link>
-              <Link to="/case-studies" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Case Studies</Link>
-              <Link to="/blog" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Blog</Link>
-              <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Contact</a>
-            </div>
-
-            {/* Resources */}
-            <div className="flex flex-col gap-3">
-              <span className="text-primary-foreground/40 text-xs uppercase tracking-wider mb-2">Resources</span>
-              <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Privacy Policy</a>
-              <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Terms of Service</a>
-            </div>
+            {columns.map((col) => (
+              <div key={col.title} className="flex flex-col gap-3">
+                <span className="text-accent text-sm font-semibold mb-1">{col.title}</span>
+                {col.links.map((link) =>
+                  isInternal(link.href) ? (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    >
+                      {link.label}
+                    </a>
+                  )
+                )}
+              </div>
+            ))}
           </div>
 
           <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-primary-foreground/40">
-              © 2025 Saipuram Technologies Pvt. Ltd. All rights reserved.
+              © 2026 Saipuram. All rights reserved.
+            </p>
+            <p className="text-sm text-primary-foreground/40">
+              AI: From Analysis to Prediction. To Accessible Intelligence.
             </p>
           </div>
         </motion.div>

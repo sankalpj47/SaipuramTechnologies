@@ -4,44 +4,42 @@ import { ArrowDown } from "lucide-react";
 export const PSHero = () => {
   return (
     <section className="relative overflow-hidden pt-4 pb-0">
-      <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 min-h-[calc(100vh-2rem)] flex items-center justify-center">
-        <div className="container mx-auto px-6 py-20">
+      <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 min-h-[60vh] md:min-h-[70vh] flex items-center justify-center">
+        <div className="container mx-auto px-6 py-12 md:py-16">
           <div className="flex flex-col items-center text-center">
             <div className="max-w-5xl">
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/70 mb-8"
+                className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/70 mt-8 md:mt-12 mb-6"
               >
-                Products & Services
+                Products
               </motion.span>
 
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-[1.15] mb-8"
+                className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-[1.15] mb-6"
               >
-                Intelligent Discovery.{" "}
-                <span className="text-accent">Evidence-Driven</span>{" "}
-                Innovation.
+                Our <span className="text-accent">Products</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="text-lg md:text-xl text-primary-foreground/60 max-w-3xl mx-auto mb-12"
+                className="text-base md:text-lg text-primary-foreground/60 max-w-2xl mx-auto mb-8"
               >
-                A platform that helps scientists with intelligent discovery and evidence-driven innovation, revolutionizing global healthcare.
+                Tools powering the next wave of scientific innovation — from target validation to clinical trial prediction.
               </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="flex flex-wrap justify-center gap-3 mb-12"
+                className="flex flex-wrap justify-center gap-3 mb-8"
               >
                 {["Drug Discovery", "AI Analytics", "Pharma Intelligence"].map((tag, i) => (
                   <motion.span

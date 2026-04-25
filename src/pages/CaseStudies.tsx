@@ -38,15 +38,15 @@ const CaseStudies = () => {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-4 pb-0">
-        <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 min-h-[calc(100vh-2rem)] flex items-center justify-center">
-          <div className="container mx-auto px-6 py-20">
+        <div className="bg-primary rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-6 min-h-[60vh] md:min-h-[70vh] flex items-center justify-center">
+          <div className="container mx-auto px-6 py-12 md:py-16">
             <div className="flex flex-col items-center text-center">
               <div className="max-w-5xl">
                 <motion.span
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/70 mb-8"
+                  className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/70 mt-8 md:mt-12 mb-6"
                 >
                   Case Studies
                 </motion.span>
@@ -55,7 +55,7 @@ const CaseStudies = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.1 }}
-                  className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-tight max-w-5xl mb-8"
+                  className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-[1.15] max-w-5xl mb-6"
                 >
                   Transforming Drug Discovery with{" "}
                   <span className="text-accent">Conversational AI</span>
@@ -65,9 +65,9 @@ const CaseStudies = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.2 }}
-                  className="text-primary-foreground/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12"
+                  className="text-primary-foreground/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8"
                 >
-                  We're replacing the months of manual data mining in drug discovery with an LLM-powered portal that lets scientists 'talk' to biological data. Based on a breakthrough real-time network analysis framework, we help biotech companies identify the right drug targets and biomarkers in minutes, not months.
+                  An LLM-powered portal that lets scientists "talk" to biological data — identifying the right drug targets and biomarkers in minutes, not months.
                 </motion.p>
 
                 <motion.div

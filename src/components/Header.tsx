@@ -61,7 +61,7 @@ export const Header = () => {
             animate={{ opacity: 1, height: "auto" }}
             className="md:hidden mt-4 pb-4 flex flex-col gap-4"
           >
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
               About
             </a>
             <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors">

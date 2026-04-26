@@ -23,7 +23,7 @@ export const Header = () => {
 
           <nav className="hidden md:flex items-center gap-8">
             <a
-              href="/#about"
+              href="/"
               className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105"
             >
               About
@@ -37,9 +37,14 @@ export const Header = () => {
             <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
               Blog
             </Link>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/80 hover:scale-105 transition-all duration-200 rounded-full px-8 py-3 text-base">
-              Contact Us
-            </Button>
+            <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
+              Contact
+            </Link>
+            <a href="https://tbep.saipuram.in/" target="_blank" rel="noopener noreferrer">
+  <Button className="bg-primary text-primary-foreground hover:bg-primary/80 hover:scale-105 transition-all duration-200 rounded-full px-8 py-3 text-base">
+    Launch TBEP
+  </Button>
+</a>
           </nav>
 
           <button
@@ -68,8 +73,11 @@ export const Header = () => {
             <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
               Blog
             </Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+              Contact
+            </Link>
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full w-full">
-              Contact Us
+              Launch TBEP
             </Button>
           </motion.nav>
         )}

@@ -14,17 +14,17 @@ const columns = [
   {
     title: "Products",
     links: [
-      { label: "TBEP", href: "/products-services" },
-      { label: "TRACES", href: "/products-services" },
-      { label: "TAU-KG", href: "/products-services" },
+      { label: "TBEP", href: "https://tbep.saipuram.in/" },
+      { label: "TRACES", href: "https://traces.mbi.in.net/" },
+      { label: "TAU-KG", href: "https://tbep.mbi.in.net/tau-kg/" },
       { label: "MolGen AI", href: "/products-services" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "/#about" },
-      { label: "Contact", href: "#" },
+      { label: "About", href: "/" },
+      { label: "Contact", href: "/contact" },
       { label: "Careers", href: "#" },
       { label: "Blog", href: "/blog" },
     ],
@@ -70,30 +70,33 @@ export const Footer = () => {
               </p>
             </div>
 
-            {columns.map((col) => (
-              <div key={col.title} className="flex flex-col gap-3">
-                <span className="text-accent text-sm font-semibold mb-1">{col.title}</span>
-                {col.links.map((link) =>
-                  isInternal(link.href) ? (
-                    <Link
-                      key={link.label}
-                      to={link.href}
-                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  ) : (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
-                    >
-                      {link.label}
-                    </a>
-                  )
-                )}
-              </div>
-            ))}
+           {columns.map((col) => (
+  <div key={col.title} className="flex flex-col gap-3">
+    <span className="text-accent text-sm font-semibold mb-1">{col.title}</span>
+
+    {col.links.map((link) =>
+      isInternal(link.href) ? (
+        <Link
+          key={link.label}
+          to={link.href}
+          className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+        >
+          {link.label}
+        </Link>
+      ) : (
+        <a
+          key={link.label}
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+        >
+          {link.label}
+        </a>
+      )
+    )}
+  </div>
+))}
           </div>
 
           <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">

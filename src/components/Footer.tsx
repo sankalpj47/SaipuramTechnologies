@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import saipuramLogo from "@/assets/saipuram-logo.png";
 
 const columns = [
   {
@@ -52,16 +53,15 @@ export const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-14">
+           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-14">
             {/* Brand */}
             <div className="col-span-2 md:col-span-3 lg:col-span-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                  <span className="text-accent-foreground font-display font-bold text-lg">S</span>
-                </div>
-                <span className="font-display text-xl text-primary-foreground">
-                  Saipuram
-                </span>
+              <div className="mb-4">
+                <img
+                  src={saipuramLogo}
+                  alt="Saipuram"
+                  className="h-14 w-auto"
+                />
               </div>
               <p className="text-primary-foreground/50 text-sm leading-relaxed">
                 Unified AI Science Platform.

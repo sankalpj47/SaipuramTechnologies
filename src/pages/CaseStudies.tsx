@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
 import { Brain, Microscope, Shield, Activity, ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const therapeuticAreas = [
   {
@@ -146,9 +147,12 @@ const CaseStudies = () => {
                   Let's explore how our platform can accelerate your drug discovery pipeline.
                 </p>
               </div>
-              <button className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-8 py-4 text-base font-medium flex-shrink-0 transition-colors">
-                Contact Us
-              </button>
+             
+<Link to="/contact">
+  <button className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-8 py-4 text-base font-medium flex-shrink-0 transition-colors">
+    Contact Us
+  </button>
+</Link>
             </div>
           </AnimatedSection>
         </div>

@@ -43,10 +43,19 @@ export const Hero = () => {
                 transition={{ duration: 0.7, delay: 0.3 }}
                 className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 md:mb-14"
               >
-                <Button className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium hover-scale">
-                  Launch TBEP
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+             <Button
+              asChild
+              className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium hover-scale"
+                   >
+                <a
+               href="https://tbep.saipuram.in/"
+                target="_blank"
+                 rel="noopener noreferrer"
+                    >
+                   Launch TBEP
+                 <ArrowRight className="ml-2 w-4 h-4" />
+                      </a>
+                  </Button>
 
                 <Button className="w-full sm:w-auto rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
                   Explore Platform

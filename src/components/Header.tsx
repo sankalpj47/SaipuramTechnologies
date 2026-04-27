@@ -29,22 +29,32 @@ export const Header = () => {
               About
             </a>
             <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
-              Products & Services
+              Products
             </Link>
             <Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
               Case Studies
             </Link>
-            <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
-              Blog
+            <Link to="/company" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
+              Company
+            </Link>
+            <Link to="/news-media" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
+              News & Media
             </Link>
             <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
               Contact
             </Link>
-            <a href="https://tbep.saipuram.in/" target="_blank" rel="noopener noreferrer">
-  <Button className="bg-primary text-primary-foreground hover:bg-primary/80 hover:scale-105 transition-all duration-200 rounded-full px-8 py-3 text-base">
-    Launch TBEP
-  </Button>
-</a>
+           <Button
+                     asChild
+                      className="bg-primary text-primary-foreground hover:bg-primary/80 hover:scale-105 transition-all duration-200 rounded-full px-8 py-3 text-base"
+                    >
+                      <a
+                          href="https://tbep.saipuram.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                           >
+                       Launch TBEP
+                             </a>
+                    </Button>
           </nav>
 
           <button
@@ -70,8 +80,11 @@ export const Header = () => {
             <Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors">
               Case Studies
             </Link>
-            <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
-              Blog
+            <Link to="/company" className="text-muted-foreground hover:text-foreground transition-colors">
+              Company
+            </Link>
+            <Link to="/news-media" className="text-muted-foreground hover:text-foreground transition-colors">
+              News & Media
             </Link>
             <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact

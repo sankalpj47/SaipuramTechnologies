@@ -72,12 +72,13 @@ export const EnterpriseSection = () => {
                 Join leading research teams transforming how science is done. From drug repurposing to clinical trial prediction — Saipuram powers it all.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:bg-primary/90 transition-all hover-scale"
-                >
+           
+                  <Link 
+                   to="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:bg-primary/90 transition-all hover-scale">
                   Request a Demo <ArrowRight className="w-4 h-4" />
-                </a>
+                  </Link>
+            
                 <Link
                   to="/products-services"
                   className="inline-flex items-center justify-center gap-2 bg-background border border-border text-foreground px-7 py-3.5 rounded-full font-medium hover:bg-secondary transition-all hover-scale"

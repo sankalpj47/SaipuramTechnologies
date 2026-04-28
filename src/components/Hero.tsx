@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -57,10 +58,15 @@ export const Hero = () => {
                       </a>
                   </Button>
 
-                <Button className="w-full sm:w-auto rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-                  Explore Platform
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+              <Button
+  asChild
+  className="w-full sm:w-auto rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+>
+  <Link to="/products-services">
+    Explore Platform
+    <ArrowRight className="ml-2 w-4 h-4" />
+  </Link>
+</Button>
               </motion.div>
 
               {/* Stats */}

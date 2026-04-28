@@ -28,15 +28,16 @@ export const Header = () => {
             >
               About
             </a>
+              <Link to="/company" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
+              Company
+            </Link>
             <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
               Products
             </Link>
             <Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
               Case Studies
             </Link>
-            <Link to="/company" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
-              Company
-            </Link>
+          
             <Link to="/news-media" className="text-muted-foreground hover:text-foreground transition-all duration-200 text-base font-medium hover:scale-105">
               News & Media
             </Link>
@@ -74,15 +75,16 @@ export const Header = () => {
             <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
               About
             </a>
+            <Link to="/company" className="text-muted-foreground hover:text-foreground transition-colors">
+              Company
+            </Link>
             <Link to="/products-services" className="text-muted-foreground hover:text-foreground transition-colors">
-              Products & Services
+              Products 
             </Link>
             <Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors">
               Case Studies
             </Link>
-            <Link to="/company" className="text-muted-foreground hover:text-foreground transition-colors">
-              Company
-            </Link>
+            
             <Link to="/news-media" className="text-muted-foreground hover:text-foreground transition-colors">
               News & Media
             </Link>

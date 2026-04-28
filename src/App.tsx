@@ -9,6 +9,7 @@ import CaseStudies from "./pages/CaseStudies";
 import Blog from "./pages/Blog";
 import Company from "./pages/Company";
 import Contact from "./pages/Contact";
+import TbepDetails from "./pages/TbepDetails";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/news-media" element={<Blog />} />
           <Route path="/company" element={<Company />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/products/tbep" element={<TbepDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

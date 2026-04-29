@@ -45,7 +45,7 @@ const products = [
     name: "TAU-KG",
     tagline: "Therapeutic Area Understanding Knowledge Graph",
     badge: "EDUCATIONAL",
-    externalLink: "https://tbep.mbi.in.net/tau-kg/",
+    externalLink: "https://tau-kg.mbi.in.net/",
     internalLink: "/products/tau-kg",
     description:
       "A knowledge graph platform that maps relationships between diseases, targets, and drugs. It enables intuitive exploration of complex biomedical networks and deeper therapeutic insights.",

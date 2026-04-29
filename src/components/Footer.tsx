@@ -17,7 +17,7 @@ const columns = [
     links: [
       { label: "TBEP", href: "https://tbep.saipuram.in/" },
       { label: "TRACES", href: "https://traces.mbi.in.net/" },
-      { label: "TAU-KG", href: "https://tbep.mbi.in.net/tau-kg/" },
+      { label: "TAU-KG", href: "https://tau-kg.mbi.in.net/" },
       { label: "MolGen AI", href: "/products-services" },
     ],
   },
